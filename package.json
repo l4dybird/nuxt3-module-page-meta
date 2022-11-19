@@ -1,0 +1,62 @@
+{
+  "name": "@l4dybird/nuxt3-module-page-meta",
+  "version": "0.0.1",
+  "description": "Nuxt3 Module Template",
+  "keywords": [
+    "nuxt",
+    "vue"
+  ],
+  "homepage": "https://github.com/l4dybird/nuxt3-module-page-meta",
+  "bugs": {
+    "url": "https://github.com/l4dybird/nuxt3-module-page-meta/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/l4dybird/nuxt3-module-page-meta.git"
+  },
+  "license": "MIT",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/module.mjs",
+      "require": "./dist/module.cjs"
+    }
+  },
+  "main": "./dist/module.cjs",
+  "module": "./dist/module.mjs",
+  "types": "./dist/types.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "npm run dev:prepare && nuxt-module-build",
+    "dev": "nuxi dev playground",
+    "dev:build": "nuxi build playground",
+    "dev:generate": "nuxi generate playground",
+    "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
+    "test": "npm run dev:prepare && vitest",
+    "test:coverage": "vitest --coverage",
+    "test:watch": "vitest -w",
+    "types": "nuxi typecheck"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^3.0.0-rc.13"
+  },
+  "devDependencies": {
+    "@nuxt/module-builder": "latest",
+    "@nuxt/test-utils": "^3.0.0-rc.13",
+    "@vitest/coverage-c8": "^0.25.2",
+    "nuxt": "^3.0.0-rc.13",
+    "playwright": "^1.27.1",
+    "typescript": "^4.8.4",
+    "vitest": "^0.25.2"
+  },
+  "volta": {
+    "node": "16.18.0",
+    "npm": "8.19.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
